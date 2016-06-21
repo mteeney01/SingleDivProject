@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Marquee | Loaders</title>
+    <style>
+      body{
+        background-color: black;
+      }
+
+      #marquee{
+        width: 100px;
+        height:20px;
+        border: 5px solid white;
+        border-radius: 5px;
+        position:relative;
+        overflow: hidden;
+      }
+
+      #marquee::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: -20px;
+        background-color: white;
+        animation: scroll 3s linear 0s infinite;
+      }
+
+      @keyframes scroll{
+        100%{
+          left: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="marquee"></div>
+  </body>
+</html>
